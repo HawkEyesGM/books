@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/757d6706b7.js"></script>
+</head>
+<body>
+    <div class="global_wrapper">
+        <div class='my_title'>MY BOOK STORE</div>
+        
+
+        <div class="global_wrapper">
+          <div class="page_book">
+            <div class="page_book__img">
+                    <img src="dist/img/1.png" alt="книга" id="main_img">
+            </div>
+            <div class="page_book__info">
+                    <form action="#">
+                      <label for="name">Название книги: </label>
+                      <input type="text" name='name' id="name" >
+
+                      <label for="name">Автор: </label>
+                      <input type="text" name='autor' >
+
+                      <label for="name">Год выпуска: </label>
+                      <input type="text" name='date' >
+
+                      <label for="name">Издательство: </label>
+                      <input type="text" name='publishName' >
+
+                      <label for="name">Телефон: </label>
+                      <input type="text" name='publishPhone' >
+
+                      <label for="name">Категория: </label>
+                      <select type="text" name='heading' >
+                        <option value="Наука">Наука</option>
+                        <option value="Бизнес">Бизнес</option>
+                        <option value="Фентези">Фентези</option>
+                        <option value="Наука">Наука</option>
+                      </select>
+
+                      <label for="name">Изображения: </label>
+                      <input type="file" name='img' multiple id="files">
+                      <button>Сохранить</button>
+                    </form>
+            
+            </div>
+
+          </div>
+        </div>
+        
+       
+    </div>
+   
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
