@@ -306,15 +306,24 @@ window.onload = function () {
 
             let button_group = document.createElement('div');
             button_group.classList.add('buttons');
-            let button_left = document.createElement('input');
+            let button_left = document.createElement('button');
             
-            let button_right = document.createElement('input');
-            button_left.type = 'button';
-            button_left.value = '<';
+            let button_right = document.createElement('button');
+            let btn_img_font_left = document.createElement('i');
+            btn_img_font_left.classList.add('fa');
+            btn_img_font_left.classList.add('fa-arrow-left');
+
+            let btn_img_font_right = document.createElement('i');
+            btn_img_font_right.classList.add('fa');
+            btn_img_font_right.classList.add('fa-arrow-right');
+            
+            button_left.appendChild(btn_img_font_left);
+            button_right.appendChild(btn_img_font_right);
+
+
             let slider_class_left = 'prev' + item.id;
             button_left.classList.add(slider_class_left);
-            button_right.type = 'button';
-            button_right.value = '>';
+
             let slider_class_right = 'next' + item.id;
             button_right.classList.add(slider_class_right);
             button_group.appendChild(button_left);
@@ -399,7 +408,10 @@ window.onload = function () {
             let query = search_input.value;
             filtered_arr = searchFilter(query);
             renderList(filtered_arr);
-            initSliders();
+            if (add_book) {
+                initSliders();
+            }
+           
         }
     }
 
@@ -413,6 +425,9 @@ window.onload = function () {
         localStorage.clear();
         localStorage.setItem('books', JSON.stringify(new_books));
         renderList(new_books);
+        if (add_book) {
+            initSliders();
+        }
     }
 
     renderList(filtered_arr);
@@ -458,7 +473,9 @@ function initSliders(){
         }
     }
 
-initSliders();
+    if (add_book){
+        initSliders();
+    }
   
 
 };
