@@ -310,11 +310,11 @@ window.onload = function () {
             
             let button_right = document.createElement('input');
             button_left.type = 'button';
-            button_left.value = '<<';
+            button_left.value = '<';
             let slider_class_left = 'prev' + item.id;
             button_left.classList.add(slider_class_left);
             button_right.type = 'button';
-            button_right.value = '>>';
+            button_right.value = '>';
             let slider_class_right = 'next' + item.id;
             button_right.classList.add(slider_class_right);
             button_group.appendChild(button_left);
@@ -431,6 +431,32 @@ function initSliders(){
         });
     }
 }
+
+/* функционал для отображения превью фото при создании книги */
+
+    let files = document.querySelector('#files');
+    if (files) {
+        files.onchange = function () {
+            previewFile();
+        }
+    }
+    
+    function previewFile() {
+        let preview = document.createElement('img');
+        let file = document.querySelector('input[type=file]').files[0];
+        let reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+        new_page_img.appendChild(preview)
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "";
+        }
+    }
 
 initSliders();
   
