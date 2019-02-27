@@ -13,32 +13,35 @@
 <body>
     <div class="global_wrapper">
         <div class='my_title'>MY BOOK STORE</div>
-        
+
 
         <div class="global_wrapper">
           <div class="page_book">
             <div class="page_book__img">
-                    <img src="dist/img/1.png" alt="книга" id="main_img">
+              
             </div>
             <div class="page_book__info">
                     <form action="#">
+
+                      <input type="hidden" id='hidden_id' value=''>
+
                       <label for="name">Название книги: </label>
                       <input type="text" name='name' id="name" >
 
                       <label for="name">Автор: </label>
-                      <input type="text" name='autor' >
+                      <input type="text" name='autor' id="autor">
 
                       <label for="name">Год выпуска: </label>
-                      <input type="text" name='date' >
+                      <input type="text" name='date' id="date">
 
                       <label for="name">Издательство: </label>
-                      <input type="text" name='publishName' >
+                      <input type="text" name='publishName' id="publishName">
 
                       <label for="name">Телефон: </label>
-                      <input type="text" name='publishPhone' >
+                      <input type="text" name='publishPhone'id="publishPhone" >
 
                       <label for="name">Категория: </label>
-                      <select type="text" name='heading' >
+                      <select type="text" name='heading' id="heading">
                         <option value="Наука">Наука</option>
                         <option value="Бизнес">Бизнес</option>
                         <option value="Фентези">Фентези</option>
@@ -47,13 +50,17 @@
 
                       <label for="name">Изображения: </label>
                       <input type="file" name='img' multiple id="files">
-                      <button>Сохранить</button>
+                      <button id="save_book">Сохранить</button>
                     </form>
             
             </div>
 
           </div>
         </div>
+
+       
+          <div class="home"><img src="dist/img/home.png" alt="книга"></div>
+       
         
        
     </div>
